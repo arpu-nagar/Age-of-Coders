@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Age of Coders</title>
+    <link rel="stylesheet" href="../public/css/landing.scss">
+</head>
+
+<body>
+    <div class="image_container">
+        <img id="AOC" src="/logos/Group 22.png">
+        <img id="stars" src="/logos/Group.png">
+    </div>
+
+
+    <div class="progress-bar" data-label="o">
+    </div>
+
+    <script>
+        const pbar = document.getElementsByClassName('progress-bar')[0];
+        var intervalID = setInterval(() => {
+            const compstyle = getComputedStyle(pbar);
+            const width = parseFloat(compstyle.getPropertyValue('--width')) || 0;
+            pbar.style.setProperty('--width', width + 0.05)
+                // pbar.style.setProperty('--width', width)
+            if (width > 59) {
+                clearInterval(intervalID)
+                window.location.replace("/login");
+            }
+        }, 5)
+    </script>
+</body>
+
+</html>

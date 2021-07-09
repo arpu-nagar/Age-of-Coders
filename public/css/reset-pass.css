@@ -1,0 +1,181 @@
+/* @import url('http://www.fontsaddict.com/fontface/lemonmilk.ttf'); */
+
+/* @font-face {
+    font-family: 'Lemon/Milk light Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Lemon/Milk light Regular'), url('LemonMilklight.woff') format('woff');
+} */
+
+@font-face {
+  font-family: "lemon_milklight";
+  src: url("../lemon_milk_fonts/lemonmilk-light-webfont.woff2") format("woff2"),
+    url("../lemon_milk_fonts/lemonmilk-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: "lemon_milklight";
+}
+
+html {
+  box-sizing: border-box;
+  background: linear-gradient(
+    180deg,
+    #000000 0%,
+    #530653 189.11%,
+    #590159 201.71%
+  );
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-size: calc(11px + 5 * ((100vw - 1024px) / 896));
+  /* font-size: 16px; */
+  overflow: hidden;
+  /* height: 100%; */
+}
+
+body {
+  background-image: url("../logos/Group.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 98vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: stretch;
+  /* border: 2px solid white; */
+}
+
+.flexbox {
+  padding: 2rem;
+  width: 50%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  /* border: 2px solid white; */
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#title {
+  font-family: "lemon_milklight";
+  font-style: normal;
+  /* font-weight: 300; */
+  font-size: 2rem;
+  /* line-height: 73px; */
+  letter-spacing: 0.25rem;
+  color: #ffffff;
+  margin-top: 9rem;
+  margin-bottom: 2rem;
+}
+
+.form {
+  margin-top: 0px;
+}
+
+#pass_form {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+}
+
+/* input{
+    margin-top:1rem ;
+} */
+
+.formDiv {
+  margin-top: 0px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#pass-con,
+#pass {
+  letter-spacing: 0.25rem;
+  color: white;
+  font-family: "lemon_milklight";
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 2rem;
+  box-sizing: border-box;
+  /* height: 30px; */
+  /* width: 100%; */
+  width: 22rem;
+  border-top-style: hidden;
+  border-left-style: hidden;
+  border-right-style: hidden;
+  background-image: none;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border-bottom-color: #530153;
+  /* padding-left: 20px; */
+}
+
+#pass-con {
+  margin-top: 3rem;
+}
+
+::placeholder {
+  font-family: "lemon_milklight";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1rem;
+  /* line-height: 28px; */
+  color: #ffffff;
+  mix-blend-mode: normal;
+  opacity: 0.4;
+  letter-spacing: 0.25rem;
+  text-align: center;
+}
+
+#stars {
+  position: absolute;
+  left: 3.85%;
+  right: 3.83%;
+  top: 4.63%;
+  bottom: 17.64%;
+}
+
+input:focus {
+  border-bottom-color: #ffffff !important;
+}
+
+#btn {
+  margin-top: 4rem;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 0.25rem;
+  border-radius: 2rem;
+  background-color: #530153;
+  border: none;
+  padding: 0.8rem;
+  /* width: 40%; */
+  /* margin-left: 150px; */
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 80;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.header {
+  position: absolute;
+  left: -2%;
+  top: 3%;
+  animation-name: fadeIn;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.aoc-logo {
+  transform: scale(0.6, 0.6);
+}

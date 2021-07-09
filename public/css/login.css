@@ -1,0 +1,560 @@
+/* @import url('http://www.fontsaddict.com/fontface/lemonmilk.ttf'); */
+
+/* @font-face {
+    font-family: 'Lemon/Milk light Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Lemon/Milk light Regular'), url('LemonMilklight.woff') format('woff');
+} */
+@font-face {
+  font-family: "pt_sansregular";
+  src: url("/pt_sans/ptsans-regular-webfont.woff2") format("woff2"),
+    url("/pt_sans/ptsans-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "lemon_milklight";
+  src: url("../lemon_milk_fonts/lemonmilk-light-webfont.woff2") format("woff2"),
+    url("../lemon_milk_fonts/lemonmilk-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: "lemon_milklight";
+  outline: none;
+}
+
+html {
+  box-sizing: border-box;
+  background: linear-gradient(
+    180deg,
+    #060606 0%,
+    #000000 10%,
+    #530653 189.11%,
+    #590159 201.71%
+  );
+  margin: 0;
+  background-repeat: no-repeat;
+  background-size: 100% 300%;
+  background-attachment: fixed;
+  font-size: 14px;
+  overflow: hidden;
+  animation-name: moving-grad;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+  font-size: calc(11px + 5 * ((100vw - 1024px) / 896));
+  /* height: 100%; */
+}
+
+body {
+  background-image: url("../logos/Group.png");
+  background-repeat: repeat;
+  background-size: contain;
+  height: 98vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: stretch;
+  /* border: 2px solid white; */
+}
+
+.flexbox {
+  padding: 2rem;
+  width: 50%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  /* border: 2px solid white; */
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#title {
+  font-family: "lemon_milklight";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 3rem;
+  line-height: 4.5rem;
+  letter-spacing: 0.25rem;
+  color: #ffffff;
+  margin-top: 6rem;
+  margin-bottom: 2rem;
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-delay: 2s;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.form {
+  margin-top: 0px;
+}
+
+#login_form {
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  animation-name: fadeIn;
+  animation-delay: 2s;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+/* input{
+    margin-top:1rem ;
+} */
+
+.formDiv {
+  margin-top: 0px;
+  z-index: 1;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#uname,
+#password {
+  color: white;
+  font-family: "pt_sansregular";
+  font-size: 1.5rem;
+  /* font-size: 1rem; */
+  text-align: center;
+  margin-top: 2rem;
+  box-sizing: border-box;
+  /* height: 30px; */
+  /* width: 100%; */
+  width: 22rem;
+  border-top-style: hidden;
+  border-left-style: hidden;
+  border-right-style: hidden;
+  background-image: none;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border-bottom-color: #530153;
+  /* padding-left: 20px; */
+}
+
+/* #uname {
+    text-transform: uppercase;
+} */
+
+#password {
+  font-family: "lemon_milklight";
+  letter-spacing: 0.25rem;
+  margin-top: 3rem;
+}
+
+::placeholder {
+  font-family: "lemon_milklight";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1rem;
+  /* line-height: 28px; */
+  color: #ffffff;
+  mix-blend-mode: normal;
+  opacity: 0.4;
+  letter-spacing: 0.25rem;
+  text-align: center;
+}
+
+#stars {
+  position: absolute;
+  left: 3.85%;
+  right: 3.83%;
+  top: 4.63%;
+  bottom: 17.64%;
+}
+
+input:focus {
+  border-bottom-color: #ffffff !important;
+}
+
+input::placeholder {
+  font-family: "lemon_milklight";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1rem;
+  /* line-height: 28px; */
+  color: #ffffff;
+  mix-blend-mode: normal;
+  opacity: 0.4;
+  letter-spacing: 0.25rem;
+  text-align: center;
+}
+
+#btn {
+  margin-top: 4rem;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 0.25rem;
+  border-radius: 2rem;
+  background-color: #34002f;
+  border: none;
+  padding: 0.8rem;
+  /* width: 40%; */
+  /* margin-left: 150px; */
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 80;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  cursor: pointer;
+
+}
+.note{
+  font-family: 'pt_sansregular';
+  color: #7a7a7a;
+  font-size: 1rem;
+  margin-top: 2rem;
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-delay: 2.5s;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+#btn:hover {
+  background-color: #42003c;
+}
+
+#btn:active {
+  background-color: #34002f;
+}
+
+#bgimg {
+  position: fixed;
+  bottom: 0;
+  margin: auto;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  width: 90vw;
+}
+
+#ellipse {
+  transform: scale(1, 0.75);
+  position: relative;
+  left: 0px;
+  right: 0px;
+  bottom: -12rem;
+  animation-name: slide;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+.forgot-pass {
+  /* margin-top: 2rem; */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#forgot {
+  font-size: 0.8rem;
+  opacity: 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  color: #7a7a7a;
+  animation-name: fadeIn;
+  animation-delay: 2.5s;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  margin-top: 1.7rem;
+  animation-timing-function: linear;
+}
+
+#reg {
+  font-size: 0.8rem;
+  opacity: 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  color: #7a7a7a;
+  animation-name: fadeIn;
+  animation-delay: 2.5s;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  margin-top: 1.7rem;
+}
+
+#rules {
+  font-size: 0.8rem;
+  opacity: 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  color: #7a7a7a;
+  animation-name: fadeIn;
+  animation-delay: 2.5s;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  margin-top: 1.7rem;
+}
+
+#forgot:hover,
+#reg:hover,
+#rules:hover {
+  color: #c2c2c2;
+}
+
+.header {
+  opacity: 0;
+  position: absolute;
+  left: -2%;
+  top: 3%;
+  animation-name: fadeIn;
+  animation-delay: 2.5s;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+
+.aoc-logo {
+  transform: scale(0.6, 0.6);
+}
+
+.mobile {
+  display: none;
+}
+.iecse_logo {
+  width: 7rem;
+  position: fixed;
+  top: 6%;
+  right: -1%;
+  transform: translate(-50%, 0);
+}
+@keyframes slide {
+  0% {
+    bottom: -30rem;
+  }
+
+  100% {
+    bottom: -12rem;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes moving-grad {
+  0% {
+    background-position: top;
+  }
+
+  /* 90%{
+        background-position: 5%;
+    } */
+  100% {
+    background-position: 100%;
+  }
+}
+
+/* @media screen and (max-height: 1000px) and (max-width:500px) {
+  html{
+    font-size: 10px;
+  }
+  #ellipse {
+    transform: scale(1, 0.75);
+    position: relative;
+    left: 0px;
+    right: 0px;
+    bottom: -23rem;
+    animation-name: slide;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+  }
+
+  .header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .aoc-logo{
+    transform: scale(0.45, 0.45);
+  }
+  .flexbox {
+    padding: 2rem;
+    width: 50%;
+    height: 50%;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 18vh;
+  }
+
+  @keyframes slide {
+    0% {
+      bottom: -30rem;
+    }
+
+    100% {
+      bottom: -23rem;
+    }
+  }
+} */
+.iecse_logo1 {
+  display: none;
+}
+.planet {
+  position: absolute;
+  bottom: 0vh;
+  z-index: 0;
+}
+@media screen and (max-height: 890px) and (max-width: 890px) {
+  html,
+  body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  #title {
+    display: none;
+  }
+
+  .formDiv {
+    display: none;
+  }
+
+  #ellipse {
+    display: none;
+    transform: scale(1, 0.75);
+    position: sticky;
+    /* left: 0px; */
+    /* right: 0px; */
+    bottom: -20rem;
+    animation-name: none;
+    /* animation-duration: 3s; */
+    /* animation-fill-mode: forwards; */
+  }
+
+  .planet {
+    display: none;
+    position: absolute;
+    bottom: -40vh;
+    /* display: flex; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+  }
+
+  .mobile {
+    background-image: url("/logos/login-planet.png");
+    width: 100%;
+    /* width: 70%; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: absolute;
+    top: 28vh;
+    height: 100%;
+    background-position: 50% 120%;
+    background-repeat: no-repeat;
+    /* z-index: -1; */
+  }
+  .mob_content {
+    opacity: 0;
+    font-family: "pt_sansregular";
+    font-size: 3rem;
+    color: #ffffff;
+    z-index: 10;
+    width: 70%;
+    letter-spacing: 0.1rem;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-delay: 0.5s;
+  }
+  .flexbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .iecse_logo {
+    display: none;
+  }
+  .iecse_logo1 {
+    display: block;
+    width: 7rem;
+    position: fixed;
+    top: 90vh;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 2;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+  }
+  #btn {
+    opacity: 0;
+    margin-top: 5rem;
+    text-align: center;
+    text-decoration: 0.25rem;
+    border-radius: 2rem;
+    background-color: #55004e;
+    border: none;
+    padding: 0.8rem;
+    /* width: 40%; */
+    /* margin-left: 150px; */
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: 80;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-delay: 1s;
+  }
+  #btn:hover {
+    background-color: #6d0064;
+  }
+  #btn:active {
+    background-color: #46003f;
+  }
+  /* body{ */
+  /* z-index: -2; */
+  /* } */
+}

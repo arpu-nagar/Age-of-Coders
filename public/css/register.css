@@ -1,0 +1,504 @@
+@font-face {
+  font-family: "lemon_milklight";
+  src: url("../lemon_milk_fonts/lemonmilk-light-webfont.woff2") format("woff2"),
+    url("../lemon_milk_fonts/lemonmilk-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "pt_sansregular";
+  src: url("/pt_sans/ptsans-regular-webfont.woff2") format("woff2"),
+    url("/pt_sans/ptsans-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: "lemon_milklight";
+  outline: none;
+}
+
+html {
+  box-sizing: border-box;
+  background: linear-gradient(180deg,
+      #000000 0%,
+      #530653 189.11%,
+      #590159 201.71%);
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-size: calc(10px + 5 * ((100vw - 1024px) / 896));
+  /* font-size: 16px; */
+  overflow: hidden;
+  /* height: 100%; */
+}
+
+body {
+  background-image: url("../logos/Group.png");
+  background-repeat: repeat;
+  background-size: contain;
+  background-attachment: fixed;
+  height: 98vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: stretch;
+  /* border: 2px solid white; */
+}
+
+.flexbox {
+  padding: 2rem;
+  width: 100%;
+  height: 98vh;
+  display: flex;
+  flex-direction: column;
+  /* border: 2px solid white; */
+  justify-content: flex-start;
+  align-items: center;
+  /* background-color: crimson; */
+}
+
+#title {
+  font-family: "lemon_milklight";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 3rem;
+  line-height: 4.5rem;
+  letter-spacing: 0.25rem;
+  color: #ffffff;
+  margin-top: 3.8rem;
+  /* margin-bottom: 2rem; */
+}
+
+#title1 {
+  display: none;
+  font-family: "lemon_milklight";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 3rem;
+  line-height: 4.5rem;
+  letter-spacing: 0.25rem;
+  color: #ffffff;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+}
+
+.form {
+  margin-top: 0px;
+}
+
+#login_form {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+}
+
+/* input{
+    margin-top:1rem ;
+} */
+
+.formDiv {
+  margin-top: 0px;
+  width: 100%;
+}
+
+/* .cont0{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    background-color: coral;
+} */
+.cont0 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* background-color: coral; */
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.cont1 {
+  /* background-color: chartreuse; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  /* background-color: aqua; */
+  height: 100%;
+}
+
+.cont2 {
+  /* background-color: chartreuse; */
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  /* background-color: brown; */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  letter-spacing: normal;
+  color: white;
+  font-family: "pt_sansregular";
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  box-sizing: border-box;
+  /* height: 20px; */
+  /* width: 100%; */
+  width: 35rem;
+  border-top-style: hidden;
+  border-left-style: hidden;
+  border-right-style: hidden;
+  background-image: none;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border-bottom-color: #530153;
+  /* padding-left: 20px; */
+}
+
+input:first-of-type {
+  margin-top: 3rem;
+}
+
+.cont2 input:last-of-type{
+  margin-bottom: 0;
+}
+
+#email {
+  margin-top: 0;
+}
+
+/* #uname {
+    text-transform: uppercase;
+}
+
+#password {
+    margin-top: 2rem;
+} */
+
+input::placeholder {
+  font-family: "lemon_milklight";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.3rem;
+  /* line-height: 28px; */
+  color: #ffffff;
+  mix-blend-mode: normal;
+  opacity: 0.4;
+  letter-spacing: 0.25rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+#stars {
+  position: absolute;
+  left: 10%;
+  right: 3.83%;
+  top: 4.63%;
+  bottom: 17.64%;
+}
+
+input:focus {
+  border-bottom-color: #ffffff !important;
+  font-family: "pt_sansregular";
+  letter-spacing: normal;
+}
+
+.ps,
+.ps:focus {
+  font-family: "lemon_milklight";
+  letter-spacing: 0.25rem;
+}
+
+#btn {
+  margin-top: 0.5rem;
+  text-align: center;
+  text-decoration: 0.25rem;
+  border-radius: 2rem;
+  background-color: #55004e;
+  border: none;
+  padding: 0.8rem;
+  /* width: 40%; */
+  /* margin-left: 150px; */
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 80;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+#btn:hover {
+  background-color: #6d0064;
+}
+
+#btn:active {
+  background-color: #46003f;
+}
+
+.header {
+  position: absolute;
+  left: -2%;
+  top: 3%;
+  animation-name: fadeIn;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.aoc-logo {
+  transform: scale(0.6, 0.6);
+}
+
+@keyframes slide {
+  0% {
+    left: -21.875rem;
+  }
+
+  100% {
+    left: -15.625rem;
+    bottom: -11.25rem;
+  }
+}
+
+.g-recaptcha {
+  transform: scale(0.8);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.iecse_logo {
+  width: 7rem;
+  position: fixed;
+  top: 6%;
+  right: -1%;
+  transform: translate(-50%, 0);
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.note {
+  font-family: 'pt_sansregular';
+  color: #c2c2c2;
+  font-size: 1.2rem;
+}
+
+.note1 {
+  display: none;
+  font-family: 'pt_sansregular';
+  color: #c2c2c2;
+  font-size: 1rem;
+}
+
+@media screen and (max-height: 800px) {
+  .cont0 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+  }
+
+  #email {
+    margin-top: 3rem;
+  }
+}
+.note {
+  font-family: "pt_sansregular";
+  color: #c2c2c2;
+  font-size: 1.2rem;
+}
+.note1 {
+  display: none;
+  font-family: "pt_sansregular";
+  color: #c2c2c2;
+  font-size: 1rem;
+}
+@media screen and (max-height: 890px) and (max-width: 890px) {
+  .iecse_logo {
+    width: 3rem;
+    position: fixed;
+    top: 4%;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  .g-recaptcha {
+    margin-top: 0;
+    transform: scale(0.7);
+  }
+
+  html {
+    font-size: calc(10px + 5 * ((100vh - 320px) / 580));
+  }
+
+  .cont0 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: -3.5vh;
+  }
+
+  .header {
+    position: relative;
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    margin-bottom: 6vh;
+    animation-fill-mode: forwards;
+  }
+
+  .flexbox {
+    width: 100%;
+    height: 98vh;
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid white; */
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0;
+    /* background-color: crimson; */
+  }
+
+  .aoc-logo {
+    /* transform: scale(0.5, 0.5); */
+    height: 9vh;
+    margin-top: 5%;
+  }
+
+  input:first-of-type {
+    margin-top: 3rem;
+  }
+
+  #email {
+    margin-top: 0;
+  }
+
+  #title {
+    display: none;
+  }
+  .note {
+    display: none;
+  }
+  .note1 {
+    display: block;
+    margin-bottom: 1vh;
+  }
+
+  #title1 {
+    display: block;
+    font-family: "lemon_milklight";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.5rem;
+    letter-spacing: 0.25rem;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  input {
+    letter-spacing: normal;
+    color: white;
+    font-family: "pt_sansregular";
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 4vh;
+    box-sizing: border-box;
+    width: 21rem;
+  }
+
+  input:first-of-type {
+    margin-top: 1.5rem;
+  }
+
+  .cont2 input:last-of-type {
+    margin-bottom: 0.2vh;
+  }
+
+  #email {
+    margin-top: 0;
+  }
+
+  /* #uname {
+        text-transform: uppercase;
+    }
+
+    #password {
+        margin-top: 2rem;
+    } */
+
+  input::placeholder {
+    font-family: "lemon_milklight";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 0.9rem;
+    /* line-height: 28px; */
+    color: #ffffff;
+    mix-blend-mode: normal;
+    opacity: 0.4;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  input:focus {
+    border-bottom-color: #ffffff !important;
+    font-family: "pt_sansregular";
+    letter-spacing: normal;
+  }
+
+  .ps,
+  .ps:focus {
+    font-family: "lemon_milklight";
+    letter-spacing: 0.25rem;
+  }
+
+  #btn {
+    margin-top: 0rem;
+    text-align: center;
+    /* text-decoration: 0.25rem; */
+    border-radius: 2rem;
+    background-color: #55004e;
+    border: none;
+    padding: 0.7rem;
+    /* width: 40%; */
+    /* margin-left: 150px; */
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 80;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    letter-spacing: 0.25rem;
+  }
+}

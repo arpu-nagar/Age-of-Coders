@@ -1,0 +1,398 @@
+  <!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+    <!-- SEO -->
+    <meta name="description"
+      content="Age of Coders is an online coding competition held and made by IECSE, the official computer science club of MIT Manipal. A 2 hour coding event, where you solve questions to conquer and hold different planets. Rack your brains at light speed and rule the galaxy!">
+    <meta property="og:url" content="https://aoc.iecsemanipal.com/">
+    <meta property="og:type" content="website">
+  <meta property=”og:image” content=”../logos/mstile-150x150.png” />
+  <meta property="og:title" content="Age of Coders">
+    <meta property="og:description"
+      content="Age of Coders is an online coding competition held and made by IECSE, the official computer science club of MIT Manipal. A 2 hour coding event, where you solve questions to conquer and hold different planets. Rack your brains at light speed and rule the galaxy!">
+    <!-- <meta name="keywords"
+    content="IECSE,Genesis,Genesis19,Genesis2019,MIT,Manipal,Manipal Institute of Technology,design_pilot,arav,reitweic,@design_pilot,Genesis 2019,Genesis 19"> -->
+    <meta name="author" content="IECSE">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords"
+      content="Age,of,coders,Age of coders,aoc,online coding competition,planets,iecse,IECSE,IECSE coding competition,MIT,Manipal,Manipal Institute of Technology, prom, prometheus,PROMETHEUS,PROMETHEUS'20,PROMETHEUS2020">
+    <!-- <title>Age of Coders</title> -->
+    <!-- <link rel="icon" href="../logos/Groupfav3.png" sizes="any" type="image/png" /> -->
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="../logos/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../logos/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../logos/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../logos/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="../logos/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../logos/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="../logos/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../logos/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="../logos/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="../logos/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="../logos/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="../logos/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="../logos/favicon-128.png" sizes="128x128" />
+    <meta name="application-name" content="&nbsp;" />
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="../logos/mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="../logos/mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="../logos/mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="../logos/mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="../logos/mstile-310x310.png" />
+    <!-- seo ends -->
+    <link rel="stylesheet" href="/css/dashboard.css" />
+    <title>Dashboard</title>
+  </head>
+
+  <body>
+    <div class="main-container">
+      <img src="/logos/Group.png" class="stars" />
+      <img src="/logos/fullnew.svg" alt="" class='iecse_logo'>
+      <a href="/regions"><img src="/logos/Group 28AOC.png" class="aoc-logo" /></a>
+      <div class="scoreboard"></div>
+
+      <div class="sub-container">
+        <!-- <div class="qLog1"></div> -->
+        <div class="cont0">
+          <div class="qLog">
+            <div class="title">
+              <div id="text-ques">QUESTIONS</div>
+            </div>
+            <div class="q-nos">
+              <%for(let i=1; i<=questions.length;i++){%>
+              <a id="<%=i%>" value="<%=i%>">
+                <input type="radio" name="qradio" id="<%=i%>1"
+                  onclick="document.getElementById('testcase1').value = ''">
+                <label for="<%=i%>1">
+                  <% if(questions[i-1].solved == 1) {%>
+                  <div class="links-solved">Q. <%=i%></div>
+                  <%}%> <% if(questions[i-1].solved == 0) {%>
+                  <%if(questions[i-1].attempts <=2 && questions[i-1].attempts >=1) {%>
+                  <div class="links-unsolved">Q. <%=i%></div>
+                  <%}%> <%if (questions[i-1].attempts == 3){%>
+                  <div class="links-wrong">Q. <%=i%></div>
+                  <%}%> <%if (questions[i-1].attempts == 0){%>
+                  <div class="links">Q. <%=i%></div>
+                  <%}%> <%}%>
+                </label>
+              </a>
+              <%}%>
+          </div>
+        </div>
+        <div class="submit-wrapper0">
+          <div class="txtTitle">
+            <div class="inline">
+              <div class="heading">Input testcase</div> <div class="heading" id="no-att">Attempts left: </div>
+            </div>
+            <textarea id="testcase" onclick="copy()" readonly></textarea>
+          </div>
+        </div>
+        <div class="submit-wrapper">
+          <div class="txtTitle">
+            <div class="heading">Submit Output</div>
+            <textarea id="testcase1"></textarea>
+          </div>
+          <button id="submit" value="submit">Submit</button>
+    </div>
+      </div>
+        <!-- <div class="question-a"></div> -->
+        <div class="inner_container">
+          <div class="question">
+            <div class="question-content">
+              <div class="title-r">
+                <div id="qname"></div>
+              </div>
+              <!-- qid: 1 title: "abc" body: "bc" constraints: "1" input_format: "1"
+              output_format: "2" sample_input: "1" sample_output: "2" points: 100 -->
+              <div class="content">
+                <p id="question"></p>
+                <div class="sub-head">Constraints</div>
+                <p class="texts"></p>
+                <div class="sub-head">Input Format</div>
+                <p class="texts"></p>
+                <div class="sub-head">Output Format</div>
+                <p class="texts"></p>
+                <div class="sub-head">Sample Input</div>
+                <p class="texts"></p>
+                <div class="sub-head">Sample Output</div>
+                <p class="texts"></p>
+                <div class="sub-head">Instructions</div>
+                <p class="texts">Generate output for the given input testcase and submit it.  You can click on the input test case box to copy it. You will get 3 attempts with different input testcases in each attempt. After 3 unsuccessful attempts you won't be allowed to make any further submissions for the same question.</p>
+              </div>
+            </div>
+            <!-- <div class="submit-a"></div> -->
+          </div>
+          <!-- <div class="submit-wrapper">
+                <div class="txtTitle">
+                  <div class="heading">Input</div>
+                  <textarea id="testcase" onclick="copy()" readonly></textarea>
+                </div>
+                <div class="txtTitle">
+                  <div class="heading">Output</div>
+                  <textarea id="testcase1"></textarea>
+                </div>
+                <button id="submit" value="submit">Submit</button>
+          </div> -->
+        </div>
+
+        <!-- <div class="abs-planet"></div> -->
+        <div class="cont2">
+          <div class="planet">
+            <div id="planet-add"></div>
+            <div class="planet_text">
+
+              <div class="arrowl">
+                <% if(region.rid != 1) {%>
+              <a href="/regions/<%= ( (region.rid-1) )%>" class="sec"> <img src="/logos/basic-app.svg" alt="right"
+                  class="left-arr"></a>
+              <%}%> <% if(region.rid == 1) {%>
+              <a href="/regions/5" class="sec"> <img src="/logos/basic-app.svg" alt="right" class="left-arr"></a>
+              <%}%>
+              </div>
+              <div id="name-reg"><%=region.rname%></div>
+            <div class="arrowr">
+              <% if(region.rid != 5) {%>
+              <a href="/regions/<%= ( (region.rid+1) )%>" class="sec"> <img src="/logos/basic-app.svg" alt="right"
+                  class="right-arr"></a>
+              <%}%>
+                    <% if(region.rid == 5) {%>
+              <a href="/regions/1" class="sec"> <img src="/logos/basic-app.svg" alt="right" class="right-arr"></a>
+              <%}%>
+              </div>
+            </div>
+
+            <div id="planet-desc">
+            <div class="text_container">
+              <div class="text_containers2">
+                Total Holders:
+              </div>
+              <div class="nos"><%=holdersinfo.length%></div>
+          </div>
+
+          <div class="text_container">
+            <div class="text_containers2">
+              Holding points:
+            </div>
+            <div class="nos"><%=holderspts%></div>
+          </div>
+
+          <div class="text_container">
+            <div class="text_containers2">
+              Your Points:
+            </div>
+            <div class="nos"><%=userpt%></div>
+          </div>
+          <div class="text_container_holder">
+            <div id="holder">HOLDERS</div>
+            <div class="holdernames">
+              <%for(let i=1; i<=holders.length;i++){%>
+              <div class="holder-name"><%=i%>. <%=holders[i-1].username%></div>
+              <%}%>
+              </div>
+            </div>
+
+
+            </div>
+            </div>
+        </div>
+        <!-- <div class="submit-wrapper">
+          <div class="txtTitle">
+            <div class="heading">Submit Output</div>
+            <textarea id="testcase1"></textarea>
+          </div>
+          <button id="submit" value="submit">Submit</button>
+    </div> -->
+      </div>
+    </div>
+    <div class="btn-div left">
+      <a href="/regions" class="btn">
+        < REGIONS</a> </div> <div id="snackbar">COPIED</div>
+    <div class="btn-div">
+      <a href="/leaderboard" class="btn">LEADERBOARD ></a>
+    </div>
+  </div>
+  <script type="text/javascript">
+    let jsonData;
+    screenY;
+    window.addEventListener("load", () => {
+      const url = window.location.href;
+      // console.log(window.width)
+      document.getElementById("testcase").addEventListener("click", () => {
+        var copyText = document.getElementById("testcase");
+        document.querySelector("#snackbar").className = "show";
+
+        copyText.select();
+        copyText.setSelectionRange(0, 99999);
+        document.execCommand("copy");
+        setTimeout(function () {
+          document.querySelector("#snackbar").className = document.querySelector("#snackbar").className
+            .replace("show", "");
+        }, 2000);
+      });
+      // const difficulty = (no) => {
+      //   if (no == 100)
+      //     return " (EASY)";
+      //   else if (no == 200)
+      //     return " (MEDIUM)";
+      //   else
+      //     return " (HARD)";
+      // }
+
+      fetch(url + "/api", {
+          method: "GET"
+        })
+        .then(response => response.json())
+        .catch(err => console.log(err))
+        .then(data => {
+          jsonData = data;
+          // console.log(jsonData)
+          //planet stuff
+          var area = document.getElementById("planet-add");
+          area.innerHTML = "";
+          var img = document.createElement("img");
+          if (data.region.rid == 1) img.src = "/logos/Aplanet.svg";
+          else if (data.region.rid == 2) img.src = "/logos/Bplanet.svg";
+          else if (data.region.rid == 3) img.src = "/logos/Cplanet.svg";
+          else if (data.region.rid == 4) img.src = "/logos/Dplanet.svg";
+          else if (data.region.rid == 5) img.src = "/logos/Eplanet.svg";
+          img.classList.add("planet-img");
+          area.appendChild(img);
+          let q;
+          let att = document.querySelector('#no-att');
+          // console.log(jsonData);
+          document.getElementById("qname").innerHTML =
+            jsonData.questions[0].title + " - " + jsonData.questions[0].points + " Points";
+          document.getElementById("question").innerHTML =
+            jsonData.questions[0].body;
+          var texts = document.getElementsByClassName("texts");
+          texts[0].innerHTML = jsonData.questions[0].constraints;
+          texts[1].innerHTML = jsonData.questions[0].input_format;
+          texts[2].innerHTML = jsonData.questions[0].output_format;
+          texts[3].innerHTML = jsonData.questions[0].sample_input;
+          texts[4].innerHTML = jsonData.questions[0].sample_output;
+          att.innerHTML = "Attempts left: " + (3-jsonData.questions[0].attempts);
+          if (jsonData.questions[0].attempts == 0)
+            document.getElementById("testcase").innerHTML =
+            jsonData.questions[0].testcase1;
+          else if (jsonData.questions[0].attempts == 1)
+            document.getElementById("testcase").innerHTML =
+            jsonData.questions[0].testcase2;
+          else if (jsonData.questions[0].attempts == 2)
+            document.getElementById("testcase").innerHTML =
+            jsonData.questions[0].testcase3;
+          else {
+            document.getElementById("submit").disabled = true;
+            document.getElementById("testcase").innerHTML =
+              "You're done with all attempts.";
+          }
+          if (
+            jsonData.questions[0].solved == 1 ||
+            jsonData.questions[0].attempts == 3
+          ) {
+            document.getElementById("submit").style.display = "none";
+          } else if (jsonData.questions[0].solved == 0) {
+            document.getElementById("submit").style.display = "block";
+          }
+          var Anchors = document.getElementsByTagName("a");
+          for (var i = 0; i <= jsonData.questions.length; i++) {
+            Anchors[i].addEventListener("click", function () {
+              const qid = parseInt(this.getAttribute("value")) - 1;
+              q = jsonData.questions[qid].qid;
+              // console.log(qid)
+              if (
+                jsonData.questions[qid].solved == 1 ||
+                jsonData.questions[qid].attempts == 3
+              ) {
+                // console.log();
+                document.getElementById("submit").style.display = "none";
+              } else if (jsonData.questions[qid].solved == 0) {
+                document.getElementById("submit").style.display = "block";
+                document.getElementById("submit").disabled = false;
+              }
+              // console.log(jsonData.questions[0]);
+              document.getElementById("qname").innerHTML =
+                jsonData.questions[qid].title + " - " + jsonData.questions[qid].points + " Points";
+              document.getElementById("question").innerHTML =
+                jsonData.questions[qid].body;
+              if (jsonData.questions[qid].attempts == 0)
+                document.getElementById("testcase").innerHTML =
+                jsonData.questions[qid].testcase1;
+              else if (jsonData.questions[qid].attempts == 1)
+                document.getElementById("testcase").innerHTML =
+                jsonData.questions[qid].testcase2;
+              else if (jsonData.questions[qid].attempts == 2)
+                document.getElementById("testcase").innerHTML =
+                jsonData.questions[qid].testcase3;
+              else {
+                document.getElementById("submit").disabled = true;
+                document.getElementById("testcase").innerHTML =
+                  "You're done with all attempts.";
+              }
+              var texts = document.getElementsByClassName("texts");
+              texts[0].innerHTML = jsonData.questions[qid].constraints;
+              texts[1].innerHTML = jsonData.questions[qid].input_format;
+              texts[2].innerHTML = jsonData.questions[qid].output_format;
+              texts[3].innerHTML = jsonData.questions[qid].sample_input;
+              texts[4].innerHTML = jsonData.questions[qid].sample_output;
+              att.innerHTML = "Attempts left: " + (3-jsonData.questions[qid].attempts);
+            });
+          }
+
+          document.getElementById("submit").addEventListener("click", (e) => {
+            var ans = document.getElementById("testcase1").value;
+            if (q == undefined)
+              q = jsonData.questions[0].qid;
+              ans = ans.trim();
+            if(ans === "")
+            {alert("Please enter the answer")
+            return;
+          }
+            let conf = confirm(`The contest is over, so your submissions won't count.`);
+
+            if(conf)
+            {
+              var data = {
+              ans: ans
+            };
+            //console.log(data);
+            // console.log("/submit/"+(parseInt(this.getAttribute('value')) - 1))
+
+            fetch("/submit/" + q, {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/JSON"
+                },
+                body: JSON.stringify(data),
+                credentials: "include",
+                redirect: "error"
+              })
+              .then(res => {
+                return res.json();
+              })
+              .then(function (json) {
+                alert(json.msg);
+                //console.log(json);
+                window.location.replace(url);
+              })
+              .catch(err=>console.log(err));
+            }
+            else
+            {
+              e.preventDefault();
+              return;
+            }
+
+
+          });
+        })
+        .catch(err => console.log(err))
+    });
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,228 @@
+@font-face {
+  font-family: 'pt_sansregular';
+  src: url('/pt_sans/ptsans-regular-webfont.woff2') format('woff2'),
+       url('/pt_sans/ptsans-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+@font-face {
+  font-family: "lemon_milklight";
+  src: url("../lemon_milk_fonts/lemonmilk-light-webfont.woff2") format("woff2"),
+    url("../lemon_milk_fonts/lemonmilk-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  font-family: "pt_sansregular";
+  outline: none;
+  scrollbar-color:#dddddd #c4c4c410 ;
+  scrollbar-width: thin;
+}
+html {
+  box-sizing: border-box;
+  background: linear-gradient(
+    180deg,
+    #000000 0%,
+    #530653 189.11%,
+    #590159 201.71%
+  );
+  margin: 0;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-size: calc(11px + 5 * ((100vw - 1024px) / 896));
+  /* font-size: 16px; */
+  /* height: 100%; */
+}
+body {
+  background-image: url("../logos/Group.png");
+  background-repeat: repeat;
+  background-size: contain;
+  background-attachment: fixed;
+  height: 98vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0;
+  align-content: stretch;
+  color: #ababab;
+  font-size: 1.5rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+h1 {
+  font-family: "lemon_milklight";
+  font-weight: normal;
+  font-size: 3rem;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  margin-top: 10rem;
+  margin-bottom: 2rem;
+}
+.rules {
+  width: 55vw;
+}
+li {
+  padding-bottom: 15px;
+}
+.left {
+  left: 0;
+}
+.btn-div {
+  margin-left: 2%;
+  position: fixed;
+  bottom: 2rem;
+}
+.btn-div2 {
+  margin-right: 2%;
+  position: fixed;
+  bottom: 2rem;
+}
+.right{
+  right: 0;
+}
+#btn {
+  font-family: "lemon_milklight";
+  /* margin-top: 3rem; */
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  border-radius: 2rem;
+  background-color: #520049;
+  border: none;
+  padding: 0.8rem;
+  /* width: 40%; */
+  /* margin-left: 150px; */
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 80;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  cursor: pointer;
+}
+#btn:hover {
+  background-color: #5f0057;
+}
+#btn:active {
+  background-color: #30002b;
+}
+.header {
+  position: absolute;
+  left: -2%;
+  top: 3%;
+  transform: scale(0.6, 0.6);
+}
+strong{
+  color: white;
+  font-weight: normal;
+}
+.iecse_logo{
+  width: 7rem;
+  position: fixed;
+  top: 6%;
+  right: -1%;
+  transform: translate(-50%, 0);
+}
+.header1{
+  display: none;
+}
+.contact{
+  font-family: 'pt_sansregular';
+  font-size: 1rem;
+  border: solid 1px #ababab;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  /* width: 100%; */
+}
+@media screen and (max-height:700px){
+  body{
+    font-size: 1.25rem;
+  }
+}
+@media screen and (max-height: 890px) and (max-width: 890px) {
+  .iecse_logo{
+    display: none;
+  }
+  .header{
+    display: none;
+  }
+  .header1{
+    display: block;
+  }
+  .iecse_logo1{
+    width: 12vw;
+    left: 50%;
+    transform: translate(-50%, 0);
+    position: fixed;
+    top: 2vh;
+  }
+  .aoc-logo1{
+    width: 60vw;
+    left: 50%;
+    transform: translate(-50%, 0);
+    position: fixed;
+    top: 5vh;
+  }
+  .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+  .btn-div{
+    position: relative;
+    margin-left: 0;
+    bottom: 0;
+    font-size: 1.6rem;
+  }
+  h1{
+    margin-top: 16vh;
+  }
+  ol.rules{
+    padding-left: 2rem;
+    height: 55vh;
+    overflow-y: scroll;
+    font-size: 2rem;
+    width: 70vw;
+    margin-bottom: 5vh;
+  }
+  .contact{
+    font-size: 1.5rem;
+  }
+  #btn{
+    font-size: 1.6rem;
+    margin-top: 2rem;
+  }
+}
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+
+::-webkit-scrollbar-track {
+  background: #c4c4c410;
+  opacity: 0.1;
+  border-radius: 4px;
+  width: 7px;
+  margin: 20px;
+}
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+  width: 5px;
+  height: auto;
+  background: #dddddd;
+  border-radius: 4px;
+}

@@ -1,0 +1,45 @@
+{
+  "name": "prom-20-age-of-coders",
+  "version": "1.0.0",
+  "description": "Age of Coders app for 2nd round for Prometheus 2020",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js -e js,css,ejs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/devangarora/prom-20-age-of-coders.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/devangarora/prom-20-age-of-coders/issues"
+  },
+  "homepage": "https://gitlab.com/devangarora/prom-20-age-of-coders#readme",
+  "dependencies": {
+    "bcrypt": "^4.0.1",
+    "body-parser": "^1.19.0",
+    "connect-flash": "^0.1.1",
+    "connect-redis": "^4.0.4",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "express-validator": "^6.4.0",
+    "jwt-simple": "^0.5.6",
+    "lottie-web": "^5.6.6",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1",
+    "node-datetime": "^2.1.2",
+    "node-fetch": "^2.6.0",
+    "nodemailer": "^6.4.6",
+    "nodemon": "^2.0.3",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "path": "^0.12.7",
+    "promise-mysql": "^3.3.1",
+    "redis": "^3.0.2",
+    "request": "^2.88.2"
+  }
+}

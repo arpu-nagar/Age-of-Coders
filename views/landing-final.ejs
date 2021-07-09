@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- SEO -->
+  <meta name="description"
+    content="Age of Coders is an online coding competition held and made by IECSE, the official computer science club of MIT Manipal. A 2 hour coding event, where you solve questions to conquer and hold different planets. Rack your brains at light speed and rule the galaxy!">
+  <meta property="og:url" content="https://aoc.iecsemanipal.com/">
+  <meta property="og:type" content="website">
+  <meta property=”og:image” content=”../logos/mstile-150x150.png” />
+  <meta property="og:title" content="Age of Coders">
+  <meta property="og:description"
+    content="Age of Coders is an online coding competition held and made by IECSE, the official computer science club of MIT Manipal. A 2 hour coding event, where you solve questions to conquer and hold different planets. Rack your brains at light speed and rule the galaxy!">
+  <!-- <meta name="keywords"
+  content="IECSE,Genesis,Genesis19,Genesis2019,MIT,Manipal,Manipal Institute of Technology,design_pilot,arav,reitweic,@design_pilot,Genesis 2019,Genesis 19"> -->
+  <meta name="author" content="IECSE">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="language" content="English">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords"
+    content="Age,of,coders,Age of coders,aoc,online coding competition,planets,iecse,IECSE,IECSE coding competition,MIT,Manipal,Manipal Institute of Technology, prom, prometheus,PROMETHEUS,PROMETHEUS'20,PROMETHEUS2020">
+  <title>Planets Landing Page</title>
+  <!-- <link rel="icon" href="../logos/Groupfav3.png" sizes="any" type="image/png" /> -->
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="../logos/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../logos/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../logos/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../logos/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="60x60" href="../logos/apple-touch-icon-60x60.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../logos/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="../logos/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../logos/apple-touch-icon-152x152.png" />
+  <link rel="icon" type="image/png" href="../logos/favicon-196x196.png" sizes="196x196" />
+  <link rel="icon" type="image/png" href="../logos/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/png" href="../logos/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="../logos/favicon-16x16.png" sizes="16x16" />
+  <link rel="icon" type="image/png" href="../logos/favicon-128.png" sizes="128x128" />
+  <meta name="application-name" content="&nbsp;" />
+  <meta name="msapplication-TileColor" content="#FFFFFF" />
+  <meta name="msapplication-TileImage" content="../logos/mstile-144x144.png" />
+  <meta name="msapplication-square70x70logo" content="../logos/mstile-70x70.png" />
+  <meta name="msapplication-square150x150logo" content="../logos/mstile-150x150.png" />
+  <meta name="msapplication-wide310x150logo" content="../logos/mstile-310x150.png" />
+  <meta name="msapplication-square310x310logo" content="../logos/mstile-310x310.png" />
+  <!-- seo ends -->
+  <link rel="stylesheet" href="/css/landing2.css" />
+  <!-- <title>Planets Landing Page</title> -->
+  <!-- <link rel="icon" href="../logos/Groupfav3.png" sizes="any" type="image/png" /> -->
+</head>
+
+<body>
+  <div class="main-container">
+    <img src="/logos/Group.png" class="stars" />
+    <div class="top-container">
+      <img src="/logos/Group 28AOC.png" class="aoc-logo" />
+      <div class="scorecard">
+        <div class="team">PLAYER</div>
+        <div class="team-name">
+          <%=user.username%>
+        </div>
+        <div class="score">SCORE</div>
+        <div class="team-score">
+          <%=user.score%>
+        </div>
+        <div class="logout">
+          <a href="/logout" class="lol">LOGOUT</a>
+        </div>
+
+      </div>
+    </div>
+    <!-- <img src="/logos/stars-tilt.png" class="stars tilt"> -->
+    <!-- <img src="/logos/Dellipse.png"> -->
+    <div class="sub-container">
+      <div class="planet-card A">
+        <a href="/regions/<%=regions[0].rid%>">
+          <img src="/logos/Aplanet.svg" class="planet onetwospc" />
+
+          <div class="area">
+            <img src="/logos/Arect.png" class="rect" />
+            <div class="reg-name">
+              <span> <%=regions[0].rname%></span>
+            </div>
+          </div>
+        </a>
+        <img class="ellipse A" src="/logos/Alower.svg" />
+
+        <!-- <div class="holder-name">
+            <%=regions[0].rid%>
+          </div> -->
+      </div>
+      <div class="planet-card B">
+        <a href="/regions/<%=regions[1].rid%>">> <img src="/logos/Bplanet.svg" class="planet" />
+
+          <div class="area">
+            <img src="/logos/Brect.png" class="rect" />
+            <div class="reg-name">
+              <%=regions[1].rname%>
+            </div>
+          </div>
+        </a>
+        <img class="ellipse B" src="/logos/Blower3.svg" />
+
+        <!-- <div class="holder-name">
+            <%=regions[3].rid%>
+          </div> -->
+      </div>
+
+      <div class="planet-card C">
+        <a href="/regions/<%=regions[2].rid%>">> <img src="/logos/Cplanet.svg" class="planet" />
+
+          <div class="area">
+            <img src="/logos/Crect.png" class="rect" />
+            <div class="reg-name">
+              <%=regions[2].rname%>
+            </div>
+          </div>
+        </a>
+        <img class="ellipse C" src="/logos/Clower.svg" />
+
+        <!-- <div class="holder-name">
+            <%=regions[2].rid%>
+          </div> -->
+      </div>
+
+      <div class="planet-card D">
+        <a href="/regions/<%=regions[3].rid%>">
+          <img src="/logos/Dplanet.svg" class="planet onetwospc" />
+
+          <div class="area">
+            <img src="/logos/Drect.png" class="rect" />
+            <div class="reg-name">
+              <%=regions[3].rname%>
+            </div>
+          </div>
+        </a>
+        <img class="ellipse D" src="/logos/Dlower.svg" />
+
+        <!-- <div class="holder-name">
+            <%=regions[1].rid%>
+          </div> -->
+      </div>
+
+      <div class="planet-card E">
+        <a href="/regions/<%=regions[4].rid%>">> <img src="/logos/Eplanet.svg" class="planet" />
+
+          <div class="area">
+            <img src="/logos/Erect.png" class="rect" />
+            <div class="reg-name">
+              <%=regions[4].rname%>
+            </div>
+          </div>
+        </a>
+        <img class="ellipse E" src="/logos/Elower.svg" />
+
+        <!--  <div class="holder-name">
+            <%=regions[4].rid%>
+          </div> -->
+      </div>
+    </div>
+  </div>
+  <div class="btn-div left">
+    <a href="/rules" class="btn">
+      < RULES</a> </div> <div class="btn-div">
+        <a href="/leaderboard" class="btn">LEADERBOARD ></a>
+  </div>
+  <img src="/logos/fullnew.svg" alt="" class='iecse_logo'>
+
+</body>
+<script>
+  // console.log(window.location.href);
+  window.addEventListener("load", () => {
+    fetch("/regions", {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/JSON",
+        },
+        credentials: "include",
+        redirect: "error",
+      })
+      .then((res) => {
+        return res.json();
+      })
+      .then(function (json) {
+        // console.log(json);
+      });
+  });
+</script>
+
+</html>

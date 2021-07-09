@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- SEO -->
+  <meta name="description"
+    content="Age of Coders is an online coding competition held and made by IECSE, the official computer science club of MIT Manipal. A 2 hour coding event, where you solve questions to conquer and hold different planets. Rack your brains at light speed and rule the galaxy!">
+  <meta property="og:url" content="https://aoc.iecsemanipal.com/">
+  <meta property="og:type" content="website">
+  <meta property=”og:image” content=”../logos/mstile-150x150.png” />
+  <meta property="og:title" content="Age of Coders">
+  <meta property="og:description"
+    content="Age of Coders is an online coding competition held and made by IECSE, the official computer science club of MIT Manipal. A 2 hour coding event, where you solve questions to conquer and hold different planets. Rack your brains at light speed and rule the galaxy!">
+  <!-- <meta name="keywords"
+    content="IECSE,Genesis,Genesis19,Genesis2019,MIT,Manipal,Manipal Institute of Technology,design_pilot,arav,reitweic,@design_pilot,Genesis 2019,Genesis 19"> -->
+  <meta name="author" content="IECSE">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="language" content="English">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords"
+    content="Age,of,coders,Age of coders,aoc,online coding competition,planets,iecse,IECSE,IECSE coding competition,MIT,Manipal,Manipal Institute of Technology, prom, prometheus,PROMETHEUS,PROMETHEUS'20,PROMETHEUS2020">
+  <title>Age of Coders</title>
+  <!-- <link rel="icon" href="../logos/Groupfav3.png" sizes="any" type="image/png" /> -->
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="../logos/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../logos/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../logos/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../logos/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="60x60" href="../logos/apple-touch-icon-60x60.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../logos/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="../logos/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../logos/apple-touch-icon-152x152.png" />
+  <link rel="icon" type="image/png" href="../logos/favicon-196x196.png" sizes="196x196" />
+  <link rel="icon" type="image/png" href="../logos/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/png" href="../logos/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="../logos/favicon-16x16.png" sizes="16x16" />
+  <link rel="icon" type="image/png" href="../logos/favicon-128.png" sizes="128x128" />
+  <meta name="application-name" content="&nbsp;" />
+  <meta name="msapplication-TileColor" content="#FFFFFF" />
+  <meta name="msapplication-TileImage" content="../logos/mstile-144x144.png" />
+  <meta name="msapplication-square70x70logo" content="../logos/mstile-70x70.png" />
+  <meta name="msapplication-square150x150logo" content="../logos/mstile-150x150.png" />
+  <meta name="msapplication-wide310x150logo" content="../logos/mstile-310x150.png" />
+  <meta name="msapplication-square310x310logo" content="../logos/mstile-310x310.png" />
+  <!-- seo ends -->
+  <link rel="stylesheet" href="/css/login.css" />
+</head>
+
+<body>
+  <!-- <img id="stars" src="/logos/Group.png"> -->
+
+  <div class="flexbox">
+    <div class="header">
+      <img src="/logos/Group 28AOC.png" class="aoc-logo" />
+      <img src="/logos/fullnew.svg" alt="" class="iecse_logo" />
+    </div>
+    <span id="title">LOGIN</span>
+    <div class="formDiv">
+      <form id="login_form" autocomplete="off">
+        <input id="uname" name="username" type="text" placeholder="USERNAME" onblur="this.placeholder='USERNAME'"
+          required onfocus="this.placeholder=''" />
+        <input id="password" name="pass" type="password" placeholder="PASSWORD" onblur="this.placeholder='PASSWORD'"
+          onfocus="this.placeholder=''" required />
+        <button id="btn" type="submit">SUBMIT</button>
+      </form>
+      <div class="note">Note: Registrations close on 6th May, 2020 at 5:30pm.</div>
+
+      <div class="forgot-pass">
+        <a href="/forgotpassword" id="forgot">FORGOT PASSWORD?</a>
+        <a href="/register" id="reg">SIGN UP</a>
+        <a href="/rules" id="rules">RULES</a>
+      </div>
+    </div>
+
+    <div class="mobile">
+      <div class="mob_content">
+        Dear user, <br />
+        Please open the Age of Coders website on your laptop, so that you can
+        enjoy a pleasant and seamless experience.
+        <br /><br />
+        Thank You,
+        <br />
+        Team IECSE
+      </div>
+      <img src="/logos/fullnew.svg" alt="" class="iecse_logo1" />
+
+      <a href="/register"><button id="btn" type="submit">REGISTER</button></a>
+    </div>
+    <div class="planet">
+      <img id="ellipse" src="/logos/login-planet.png" />
+    </div>
+  </div>
+  <script>
+    document
+      .getElementById("login_form")
+      .addEventListener("submit", onSubmit);
+
+    function onSubmit(e) {
+      const url1 = window.location.origin + "/rules";
+      const url2 = window.location.origin +"/login";
+      e.preventDefault();
+      // This data is not being used in the back end (Only the token), but have it here for you to experiment
+      const username = document.getElementById("uname").value;
+      const password = document.getElementById("password").value;
+      fetch("/login", {
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          redirect: "follow",
+          body: JSON.stringify({
+            username: username,
+            pass: password,
+          }),
+        })
+        .then((res) => {
+          return res.json();
+        })
+        .catch(err => console.log(err))
+        .then(function (json) {
+          if (json.msg != "successful login"){
+            alert(json.msg);
+            window.location.replace(url2);
+          }
+          else{
+            window.location.replace(url1);
+          }
+        })
+        .catch(err => console.log(err))
+    }
+  </script>
+</body>
+
+</html>

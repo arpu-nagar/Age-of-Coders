@@ -1,0 +1,232 @@
+@font-face {
+    font-family: "lemon_milklight";
+    src: url("../lemon_milk_fonts/lemonmilk-light-webfont.woff2") format("woff2"),
+        url("../lemon_milk_fonts/lemonmilk-light-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'pt_sansregular';
+    src: url('/pt_sans/ptsans-regular-webfont.woff2') format('woff2'),
+         url('/pt_sans/ptsans-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+  }
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "lemon_milklight";
+    box-sizing: border-box;
+    color: white;
+    outline: none;
+}
+
+html {
+    overflow: hidden;
+
+    background: linear-gradient(180deg,
+            #000000 0%,
+            #590159 201.71%,
+            #310131 201.71%);
+    background-repeat: repeat-x;
+    background-attachment: fixed;
+    width: 100%;
+    font-size: calc(11px + 5 * ((100vw - 1024px) / 896));
+    height: 100vh;
+}
+
+body {
+    background-image: url("../logos/Group.png");
+    background-repeat: no-repeat;
+    /* background-size: contain; */
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.header {
+    position: absolute;
+    left: -2%;
+    top: 3%;
+}
+
+.aoc-logo {
+    transform: scale(0.6, 0.6);
+}
+
+.planet {
+    /* position: fixed;
+    bottom: 0;
+    width: 100%; */
+    display: none;
+}
+.container{
+    /* background-color: brown; */
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-image: url('/logos/login-planet.png');
+    background-position: 50% 130%;
+    background-repeat: no-repeat;
+}
+#ellipse {
+    display: none;
+    transform: scale(1, 0.75);
+    position: relative;
+    left: 0px;
+    right: 0px;
+    bottom: -6rem;
+}
+
+.text0 {
+    font-family: 'lemon_milklight';
+    color: #c2c2c2;
+    font-size: 3rem;
+    font-weight: 400;
+    letter-spacing: 3rem;
+    text-align: left;
+    /* width: 40%; */
+    margin-top: 18rem;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+}
+
+.text1 {
+    font-family: 'lemon_milklight';
+    color: white;
+    font-size: 8rem;
+    font-weight: 600;
+    letter-spacing: 2rem;
+    text-align: left;
+    /* width: 40%; */
+    margin-bottom: 3rem;
+}
+
+.text2 {
+    font-family: 'pt_sansregular';
+    font-size: 2rem;
+    color: rgba(129, 129, 129, 0.507);
+    /* width: 40%; */
+    text-align: left;
+    font-weight: 300;
+    text-transform: lowercase;
+}
+
+.btn-div {
+    margin-top: 2em;
+    /* margin-right: 2%;
+    margin-left: auto;
+
+    position: fixed;
+    bottom: 3rem;
+    right: 0; */
+    cursor: pointer;
+    z-index: 1;
+}
+
+#btn {
+    font-family: "lemon_milklight";
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+    border-radius: 2rem;
+    background-color: #46003f;
+    /* background-color: #57004e; */
+    border: none;
+    padding: 0.8rem;
+    color: white;
+    font-size: 1.2rem;
+    /* font-weight: 80; */
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    cursor: pointer;
+}
+
+#btn:hover {
+    background-color: #52004b;
+    /* background-color: #610059; */
+}
+
+#btn:active {
+    background-color: #30002b;
+    /* background-color: #46003f; */
+}
+.iecse_logo{
+    width: 7rem;
+    position: fixed;
+    top: 6%;
+    right: -1%;
+    transform: translate(-50%, 0);
+  }
+  .iecse_logo1{
+    display: none;
+  }
+@media screen and (max-height:900px) and (max-width:900px) {
+    html, body{
+        margin: 0;
+        overflow: hidden;
+    }
+    .header {
+        position: relative;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        /* background-color: aqua; */
+    }
+    .container{
+        /* background-color: brown; */
+        margin: 0;
+        width: 100vw;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        background-image: url('/logos/login-planet.png');
+        background-position: 50% 70vh;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    #btn {
+        font-family: "lemon_milklight";
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 0.4rem;
+        border-radius: 2rem;
+        background-color: #46003f;
+        /* background-color: #57004e; */
+        border: none;
+        padding: 0.8rem;
+        color: white;
+        font-size: 2rem;
+        /* font-weight: 80; */
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+        cursor: pointer;
+    }
+    .iecse_logo{
+        display: none;
+      }
+      .iecse_logo1{
+        display: block;
+        width: 7rem;
+        position: fixed;
+        top: 90vh;
+        left: 50%;
+        transform: translate(-50%, 0);
+        z-index: 2;
+      }
+}
